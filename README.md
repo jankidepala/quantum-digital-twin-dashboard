@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 ```md
 # ⚛️ Quantum Digital Twin Dashboard
 
 A full-stack quantum computing platform that simulates and executes quantum circuits using **Qiskit**, with a real-time web dashboard built in **React** and a backend powered by **FastAPI**.
+=======
+<<<<<<< HEAD
+# Quantum Digital Twin Dashboard
+
+=======
+<<<<<<< HEAD
+
+=======
+# Quantum Digital Twin Dashboard
+
+>>>>>>> a733754 (Initial quantum dashboard (frontend + backend))
+Full-stack quantum simulation system using:
+- FastAPI
+- Qiskit
+- React
+- Digital Twin architecture
+>>>>>>> d200e5d (overwrite repo)
 
 This project demonstrates how quantum systems behave under:
 - ideal simulation
@@ -202,6 +220,7 @@ http://localhost:8000
 cd frontend
 npm install
 npm run dev
+<<<<<<< HEAD
 ```
 
 Frontend runs at:
@@ -263,3 +282,9 @@ Built as a Quantum Engineering Portfolio Project demonstrating:
 
 👉 **or :contentReference[oaicite:2]{index=2}**
 ```
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b8d24da (Initial Quantum Digital Twin Dashboard)
+>>>>>>> a733754 (Initial quantum dashboard (frontend + backend))
+>>>>>>> d200e5d (overwrite repo)

@@ -5,12 +5,26 @@
     "dev": "vite"
   },
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^1.6.0",
     "react": "^18.0.0",
+=======
+<<<<<<< HEAD
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "axios": "^1.6.0"
+=======
+    "axios": "^1.6.0",
+    "react": "^18.0.0",
+>>>>>>> d200e5d (overwrite repo)
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
     "vite": "^8.0.10"
+<<<<<<< HEAD
+=======
+>>>>>>> a733754 (Initial quantum dashboard (frontend + backend))
+>>>>>>> d200e5d (overwrite repo)
   }
 }

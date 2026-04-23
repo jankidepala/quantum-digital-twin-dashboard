@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import { getQuantumResult } from "./api";
 
@@ -6,6 +7,23 @@ import ResultsPanel from "./components/ResultsPanel";
 import CircuitView from "./components/CircuitView";
 
 export default function App() {
+=======
+<<<<<<< HEAD
+import Dashboard from "./components/Dashboard";
+
+export default function App() {
+  return <Dashboard />;
+}
+=======
+import { useState } from "react";
+import { getQuantumResult } from "./api";
+
+import ControlPanel from "./components/ControlPanel";
+import ResultsPanel from "./components/ResultsPanel";
+import CircuitView from "./components/CircuitView";
+
+export default function App() {
+>>>>>>> d200e5d (overwrite repo)
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -37,4 +55,9 @@ export default function App() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a733754 (Initial quantum dashboard (frontend + backend))
+>>>>>>> d200e5d (overwrite repo)
