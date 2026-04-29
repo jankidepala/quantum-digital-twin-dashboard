@@ -1,7 +1,3 @@
-Got it — here’s a **clean, professional README without week-by-week clutter**, focused on what recruiters actually care about: what it is, what it does, how it works, and how to run it.
-
----
-
 ```md
 # ⚛️ Quantum Digital Twin Dashboard
 
