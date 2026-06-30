@@ -421,9 +421,3 @@ Built as a Quantum Engineering Portfolio Project demonstrating:
 
 👉 **or :contentReference[oaicite:2]{index=2}**
 ```
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b8d24da (Initial Quantum Digital Twin Dashboard)
->>>>>>> a733754 (Initial quantum dashboard (frontend + backend))
->>>>>>> d200e5d (overwrite repo)
