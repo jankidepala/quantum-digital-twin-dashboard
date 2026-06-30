@@ -418,6 +418,3 @@ Built as a Quantum Engineering Portfolio Project demonstrating:
 * Quantum software systems
 * Hardware-aware simulation thinking
 * Full-stack quantum application design
-
-👉 **or :contentReference[oaicite:2]{index=2}**
-```
