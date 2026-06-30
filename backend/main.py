@@ -1,26 +1,18 @@
+# backend/main.py
 from fastapi import FastAPI
-from qiskit import QuantumCircuit
-from qiskit_aer import AerSimulator
-
-app = FastAPI()
-
-@app.get("/api/run")
-def run_circuit():
-    qc = QuantumCircuit(1, 1)
-    qc.h(0)
-    qc.measure(0, 0)
-
-    sim = AerSimulator()
-    result = sim.run(qc, shots=1024).result()
-
-    return result.get_counts()
-
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.routes import router # Import the router we just created
 
+app = FastAPI(title="Quantum Digital Twin API")
+
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include the router
+app.include_router(router, prefix="/api")

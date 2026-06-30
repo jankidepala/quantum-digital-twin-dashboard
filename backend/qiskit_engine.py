@@ -1,13 +1,15 @@
+# backend/qiskit_engine.py
 from qiskit import QuantumCircuit
-from qiskit_aer import AerSimulator
+from qiskit.primitives import StatevectorSampler
 
-def run_basic_circuit():
-    qc = QuantumCircuit(1, 1)
+def run_qiskit_circuit():
+    qc = QuantumCircuit(1)
     qc.h(0)
-    qc.measure(0, 0)
+    qc.measure_all()
 
-    sim = AerSimulator()
-    job = sim.run(qc, shots=1000)
-    result = job.result()
+    sampler = StatevectorSampler()
+    job = sampler.run([(qc,)])
+    result = job.result()[0]
 
-    return result.get_counts()
+    # This is the correct place for this return statement
+    return result.data.meas.get_counts()

@@ -1,6 +1,5 @@
 fastapi
 uvicorn
-qiskit
-qiskit-aer
-qiskit-ibm-runtime
+qiskit>=1.0.0
+qiskit-ibm-runtime>=0.23.0
 numpy

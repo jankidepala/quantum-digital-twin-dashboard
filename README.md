@@ -1,13 +1,152 @@
-<<<<<<< HEAD
-```md
 # ⚛️ Quantum Digital Twin Dashboard
 
-A full-stack quantum computing platform that simulates and executes quantum circuits using **Qiskit**, with a real-time web dashboard built in **React** and a backend powered by **FastAPI**.
-=======
-<<<<<<< HEAD
-# Quantum Digital Twin Dashboard
+A production-grade, full-stack quantum simulation platform combining **FastAPI**, **Qiskit v2**, **React**, and a **Digital Twin** architecture for real-time quantum system monitoring and simulation.
 
-=======
+## 🚀 Features
+
+✅ **Modern Qiskit v2 Integration** - Uses StatevectorSampler Primitives (replaces deprecated Aer)  
+✅ **FastAPI Backend** - High-performance async API with CORS support  
+✅ **React Dashboard** - Modern UI with 3D visualization (Three.js)  
+✅ **Digital Twin Model** - Mirrors physical quantum hardware constraints  
+✅ **Noise Simulation** - T1/T2 relaxation and hardware error modeling  
+✅ **Docker Support** - Ready for containerized deployment  
+✅ **Educational Notebooks** - Comprehensive Qiskit v2 tutorials  
+
+## 📁 Project Structure
+
+```
+quantum-digital-twin-dashboard/
+│
+├── backend/
+│   ├── app/
+│   │   ├── main.py                  # FastAPI application entry
+│   │   ├── api/
+│   │   │   ├── routes.py            # API endpoints
+│   │   │   ├── qiskit_runner.py     # Qiskit v2 execution (StatevectorSampler)
+│   │   │   └── digital_twin.py      # System state and metrics
+│   │   ├── core/
+│   │   │   ├── noise_model.py       # Hardware noise configuration
+│   │   │   ├── system_model.py      # Quantum system model
+│   │   │   └── calibration.py       # Device calibration data
+│   │   └── utils/
+│   │       └── logger.py            # Logging utilities
+│   ├── requirements.txt
+│   ├── main.py                      # Entry point
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Dashboard.jsx        # Main dashboard with 3D visualization
+│   │   ├── api/
+│   │   │   └── api.js               # Backend API client
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   ├── vite.config.js
+│   └── Dockerfile
+│
+├── notebooks/
+│   ├── 01_qubit_basics.ipynb        # Qiskit v2 fundamentals
+│   ├── 02_noise_modeling.ipynb      # Noise simulation
+│   └── 03_digital_twin_core.ipynb   # Digital twin concepts
+│
+├── docker-compose.yml               # Multi-container orchestration
+└── README.md
+```
+
+## 🛠️ Installation & Setup
+
+### Option 1: Local Development
+
+#### Backend
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+# Backend runs on http://127.0.0.1:8000
+```
+
+#### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+# Frontend runs on http://localhost:5173
+```
+
+### Option 2: Docker (Recommended for Production)
+
+```bash
+docker-compose up --build
+# Backend:  http://localhost:8000
+# Frontend: http://localhost:5173
+```
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/qiskit` | Execute a basic quantum circuit |
+| `GET` | `/api/digital-twin` | Get system state and hardware metrics |
+| `GET` | `/health` | Health check |
+
+## 🧠 Architecture
+
+### Backend (FastAPI + Qiskit v2)
+
+- **Qiskit v2 Primitives**: Uses modern `StatevectorSampler`
+- **CORS Middleware**: Enables cross-origin requests from React
+- **Modular Structure**: Separation of concerns
+- **Noise Modeling**: Realistic hardware simulation
+
+### Frontend (React + Vite + Three.js)
+
+- **Dashboard Component**: Real-time quantum system with 3D visualization
+- **3D Qubit System**: Interactive 5-qubit system visualization
+- **API Integration**: Async fetch calls to backend
+- **Responsive Design**: Works on desktop and tablet
+
+## 🚀 Quick Start
+
+1. **Clone & Install**
+   ```bash
+   git clone <repo>
+   cd quantum-digital-twin-dashboard
+   cd backend && pip install -r requirements.txt && cd ..
+   cd frontend && npm install && cd ..
+   ```
+
+2. **Run Backend**
+   ```bash
+   cd backend
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   uvicorn app.main:app --reload
+   ```
+
+3. **Run Frontend** (in a new terminal)
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+4. **Open Browser**
+   - Navigate to http://localhost:5173
+
+## 📊 Dashboard Features
+
+- **3D Quantum Visualization**: Interactive rendering of 5-qubit system
+- **Hardware Metrics**: Real-time system state and calibration data
+- **Quantum Results**: Circuit execution counts and statistics
+- **Auto-rotating**: 3D scene rotates automatically with mouse control
+
+## 📝 License
+
+MIT
+
+---
+
+**Made with ⚛️ for quantum computing enthusiasts**
 <<<<<<< HEAD
 
 =======
