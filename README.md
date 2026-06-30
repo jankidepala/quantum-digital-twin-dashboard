@@ -418,3 +418,9 @@ Built as a Quantum Engineering Portfolio Project demonstrating:
 * Quantum software systems
 * Hardware-aware simulation thinking
 * Full-stack quantum application design
+
+
+# Git
+* git add . 
+* git commit -m "fix: resolve rendering errors in ResultsPanel and sync App state"
+* git push origin main
