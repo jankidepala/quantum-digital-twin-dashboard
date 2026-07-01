@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { getQuantumResult } from "./api";
 import ControlPanel from "./components/ControlPanel";
-import Dashboard from "./components/Dashboard"; // Use the component you already have
+import Dashboard from "./components/Dashboard";
+import LearningHub from "./components/LearningHub";
 
 export default function App() {
   const [result, setResult] = useState(null);
@@ -23,10 +24,13 @@ export default function App() {
   return (
     <div className="container">
       <h1>⚛️ Quantum Dashboard</h1>
-      <ControlPanel onRun={runQuantum} />
-      
-      {/* Pass the data and loading state to your Dashboard component */}
-      <Dashboard data={result} loading={loading} />
+      <div className="grid">
+        <LearningHub />
+        <div>
+          <ControlPanel onRun={runQuantum} />
+          <Dashboard data={result} loading={loading} />
+        </div>
+      </div>
     </div>
   );
 }
